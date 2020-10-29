@@ -4,16 +4,26 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--<bean id="user" class="com.atguigu.spring5.Uer"> </bean>-->
     <!--<bean id="book" class="com.atguigu.spring5.Book">-->
-     <!--&lt;!&ndash;-使用property完成属性注入-->
-      <!--name：类里面的属性名称-->
-      <!--value：向属性注入的值-->
-     <!--&ndash;&gt;-->
+     <!---使用property完成属性注入
+      name：类里面的属性名称
+      value：向属性注入的值
+     -->
+        <!---向属性里面输入NULL-->
         <!--<property name="bname" value="spring"></property>-->
         <!--<property name="bauthor" value="spring5"></property>-->
+        <!--<property name="address" ><null/></property>-->
+        <!--包含特殊符号<<>>
+        1.可以吧<>进行转义&lt;&gt;
+        2.把带特殊符号内容写入CDATA
+        -->
+        <!--<property name="address">-->
+            <!--<value><![CDATA[<<南京>>]]></value>-->
+
+        <!--</property>-->
     <!--</bean>-->
     <!--有参构造进行注入-->
-    <bean id="orders" class="com.atguigu.spring5.Orders">
-        <constructor-arg name="oname" value="abc"></constructor-arg>
-        <constructor-arg name="address" value="bb"></constructor-arg>
-    </bean>
+    <!--<bean id="orders" class="com.atguigu.spring5.Orders">-->
+        <!--<constructor-arg name="oname" value="abc"></constructor-arg>-->
+        <!--<constructor-arg name="address" value="bb"></constructor-arg>-->
+    <!--</bean>-->
 </beans>

@@ -21,13 +21,13 @@ public class testdemo {
         System.out.println(uer);
         uer.add();
     }*/
-//    @Test
-//    public void testBook()
-//    {
-//        ApplicationContext context=new ClassPathXmlApplicationContext("bean1.xml");
-//        Book book= context.getBean("book",Book.class);
-//        book.testBook();
-//    }
+    @Test
+    public void testBook()
+    {
+        ApplicationContext context=new ClassPathXmlApplicationContext("bean1.xml");
+        Book book= context.getBean("book",Book.class);
+        book.testBook();
+    }
     @Test
     public void testOrders()
     {
