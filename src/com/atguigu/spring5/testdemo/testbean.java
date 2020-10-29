@@ -3,6 +3,7 @@ package com.atguigu.spring5.testdemo;
 import com.atguigu.spring5.Book;
 import com.atguigu.spring5.Orders;
 import com.atguigu.spring5.Uer;
+import com.atguigu.spring5.bean.Emp;
 import com.atguigu.spring5.servive.UserService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -19,6 +20,13 @@ public class testbean {
         ApplicationContext context=new ClassPathXmlApplicationContext("bean2.xml");
         UserService userService= context.getBean("userService",UserService.class);
         userService.add();
+    }
+    @Test
+    public void testAdd()
+    {
+        ApplicationContext context=new ClassPathXmlApplicationContext("bean4.xml");
+        Emp emp =context.getBean("emp",Emp.class);
+        emp.add();
     }
 
 }
